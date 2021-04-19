@@ -30,13 +30,14 @@ From this barebones starting point, it's much easier to add Hugo's powerful spec
 4. Copy&paste a **first HTML page** with buefy components from [this file](https://github.com/sbeecks/buefy-hugo-barebones/blob/main/content/index.html) here: ```echo >> content/index.html```
 5. **Check the test page** in your browser: ```hugo server -D --disableFastRender``` => live on [http://localhost:1313]().
 6. **Create a repository** for the deployment on Netlify: ```git init; git add *; git commit -m 'Initial barebones buefy site on Hugo'```
-7. Now create a new repository ```newRepo``` **on Github** (initially without README.md and license file).
+7. Now create a new repository ```newRepo``` **on Github** (initially _without_ README.md and license file).
 8. ... **link your repository** to GitHub: ```git remote add origin https://github.com/yourID/newRepo.git```
 9. ... and **sync your files** to GitHub: ```git branch -M main; git push -u origin main```
-10. Finally, [on Netlify.com](https://app.netlify.com/start), **click "create new site from Git"**, choose the GitHub repository to link from Netlify, and voilá: Render your buefy components from Hugo on Netlify, served at a Google Page Speed of 99. It should look like [this demo site](https://lucid-yonath-e15795.netlify.app/) that is being auto-generated from this repository.
+10. Finally, [on Netlify.com](https://app.netlify.com/start), **click "create new site from Git"**, choose the GitHub repository to link from Netlify, and voilá: Render your buefy components from Hugo on Netlify, served at a Google Page Speed of 99. 
+It should look like [this demo site](https://lucid-yonath-e15795.netlify.app/) that is being auto-generated from this repository.
 
 ### What's next?
-Well, this is the most simple way I'm aware of, with minimal configuration needs.  This does not mean it's anything close to perfect.  These are a few things I suggest to explore from here:
+Well, this is the most simple way I'm aware of, with minimal configuration needs.  This does not mean it's anything close to perfect: It's just a bare skeleton.  These are a few things I suggest to explore from here:
 * **Read the docs**. Move on from here. Learn using the frameworks.
 * Break down the barebones ```content/index.html``` file in this repository into proper page templates (in ```layout/```) and ```.md``` Markdown files (in ```content/```). 
 * Properly configure ```config.toml``` to meet your needs.
