@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+</head>
+
+<body>
+  
+<div id="app">
+  {{ message.toUpperCase() }}
+</div>
+  
+<div id="app-1">
+  {{ message }}
+  <button @click="toLower">Kleinbuchstaben</button>
+  <button @click="toUpper">Grossbuchstaben</button>
+</div>  
+  
+
+<div id="app-2">
+  {{ message }}
+  <input @keydown.enter="setMessage">
+</div>
+
+<div id="app-buefy">
+        <b-button
+            label="Toggle"
+            class="block"
+            @click="atClick">
+        </b-button>
+        <b-notification v-model="isActive" aria-close-label="Close notification">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+        </b-notification>
+</div>
+
+ <script src="https://unpkg.com/vue"></script>
+<!-- development version, includes helpful console warnings
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+<!-- production version, optimized for size and speed 
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+
+<!-- BUEFY FULL BUNDLE -->
+<script src="https://unpkg.com/buefy/dist/buefy.min.js"></script>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue!'
+    }
+  })
+</script>
+
+<script>
+var app1 = new Vue({
+  el: '#app-1',
+  data: {
+    message: 'UPPER- and lowercase!'
+  },
+  methods: {
+    toLower: function () {
+      this.message = this.message.toLowerCase();
+    },
+    toUpper: function () {
+      this.message = this.message.toUpperCase();
+    }
+  }
+});
+</script>
+
+<script>
+const app2 = new Vue({
+  el: '#app-2',
+  data: {
+    message: 'Hello Vue!'
+  },
+  methods: {
+    setMessage: function (event) {
+      this.message = event.target.value;
+    }
+  }
+});
+</script>
+
+<script>
+  var app_buefy = new Vue({
+    el: '#app-buefy',
+    data() { 
+      console.log(this)
+      return {
+        isActive: true
+      }
+    },
+    methods: {
+      data: function () { console.log(this.isActive); return { isActive: true } },
+      atClick: function () {
+        console.log(this.isActive)
+        this.isActive = !this.isActive;
+      }
+    }
+  })
+</script>
+
+</body>
+</html>

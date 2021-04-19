@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+</head>
+
+<body>
+
+<!-- Buefy Elements B-Button and B-Notification: -->  
+<div id="app-buefy">
+        <b-button
+            label="Toggle"
+            class="block"
+            @click="isActive = !isActive;">
+        </b-button>
+        <b-notification v-model="isActive" aria-close-label="Close notification">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+        </b-notification>
+</div>
+
+<!-- Necessary vue.js 2.6.x for Buefy: -->  
+ <script src="https://unpkg.com/vue"></script>
+<!-- BUEFY FULL BUNDLE -->
+<script src="https://unpkg.com/buefy/dist/buefy.min.js"></script>
+
+<!-- Adapted JS part of the buefy element: -->  
+<script>
+  var app_buefy = new Vue({
+    el: '#app-buefy',
+    data() { 
+      return {
+        isActive: true
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
