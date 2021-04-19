@@ -28,7 +28,7 @@ From this barebones starting point, it's much easier to add Hugo's powerful spec
 2. Create a **new Hugo site**: ```hugo new site buefy-hugo-barebones; cd buefy-hugo-barebones```
 3. Ensure Hugo **renders HTML**: ```echo "\n[markup.goldmark.renderer]\n unsafe= true" >> config.toml```
 4. Copy&paste a **first HTML page** with buefy components from [this file](https://github.com/sbeecks/buefy-hugo-barebones/blob/main/content/index.html) here: ```echo >> content/index.html```
-5. **Check the test page** in your browser: ```hugo server -D --disableFastRender``` => see it live on [http://localhost:1313]().
+5. **Check the test page** in your browser: ```hugo server -D --disableFastRender``` => it's live on [http://localhost:1313]().
 6. **Create a repository** for the deployment on Netlify: ```git init; git add *; git commit -m 'Initial barebones buefy site on Hugo'```
 7. Now create a new repository ```buefy-hugo-barebones``` **on Github** (initially without README.md and license file).
 8. ... **link your repository** to GitHub: ```git remote add origin https://github.com/yourID/theNewRepository.git```
