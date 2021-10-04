@@ -34,6 +34,7 @@ From this barebones starting point, it's much easier to add Hugo's powerful spec
 8. ... **link your repository** to GitHub: ```git remote add origin https://github.com/yourID/newRepo.git```
 9. ... and **sync your files** to GitHub: ```git branch -M main; git push -u origin main```
 10. Finally, [on Netlify.com](https://app.netlify.com/start), **click "create new site from Git"**, choose the GitHub repository to link from Netlify, et voilá: 
+
 Render your web site with buefy components from Hugo on Netlify, served at a Google Page Speed of 99. It should look like [this demo site](https://lucid-yonath-e15795.netlify.app/) that is being auto-generated from this repository.
 
 ### What's next?
